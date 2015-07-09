@@ -31,9 +31,9 @@ The readable(!) code makes use of:
 
   using these fragments, the method would make a query against our dictionary (which has been cleaned up to remove trailing lines and only words which have a max length of 6 characters)
 
-  That's all for this class.  Although this class is somewhat readable, it is pretty slow.  On my machine, it look an abysmal 23 seconds to find the matching words.  Not very good.
+  That's all for this class.  Although this class is somewhat readable, it is pretty slow.  On my machine, it look an abysmal 23 seconds to find the matching words.  Not very good :shit:.
 
-## Faster (more fun!)
+## Faster (more fun! :bowtie:)
   The faster code works with very different criteria.  It tries to execute the code as quickly as possible, shaving milliseconds where possible. The main differences are:
 
   1) The files is read differently, rather than iterating over each line, I send a `.read` to the file, and split on the trailing lines
@@ -58,15 +58,15 @@ The readable(!) code makes use of:
   Again, rather than checking against all the words in the dictionary, I now only need to check against 2 words in this case (another O(n) problem solved)
 
 ##Finally
-  I finally got a little stuck with shaving time.  I managed to get it down to 12.3 seconds.  But I was not happy with this.  That’s a long time!
+  I finally got a little stuck with shaving time :neckbeard:.  I managed to get it down to 12.3 seconds.  But I was not happy with this.  That’s a long time!
 
   So, I brought out the big guns! Ruby-Prof (haven’t used it before if I am honest, but I read a lot about how Aaron Patterson uses it for his Rails core work).
 
-  Using this profiler, I spotted than 93% of the program's life was being spent on `<<` method inside `cleaned_up_dictionary_words`.
+  Using this profiler, I spotted that 93% of the program's life was being spent on `<<` method inside `cleaned_up_dictionary_words`.
 
-  After doing some research, I managed to look at the documentation, which stated that the implementation of `Set` is much faster (C lib).  And since we are never going to have (or want) two words, which are the same, I opted to use set.  The time dropped to `0.141` on initialization and only `0.07` after subsequent usage of the initialized dictionary! Yessir!
+  After doing some research, I managed to look at the documentation, which stated that the implementation of `Set` is much faster (C lib).  And since we are never going to have (or want) two words, which are the same, I opted to use set.  The time dropped to **`0.141` seconds on initialization and only `0.07` seconds** after subsequent usage of the initialized dictionary! Yessir! :heart_eyes:
 
   I can't see how I can improve on the speed, since I have been trying to shave seconds here and there for the last couple of hours.  Might revisit this time.
 
 ## Tests
-  I should have test, but I genuinely did not have time to do them since I was a little busy between work and other interviews.  More than happy to discuss how to test this or even bring my laptop to test this in the interview if you want.
+  I should have test, but I genuinely did not have time to do them since I was a little busy between work and other interviews.  More than happy to discuss how to test this or even bring my laptop to test this in the interview if you want. 
