@@ -66,7 +66,7 @@ The readable(!) code makes use of:
 
   After doing some research, I managed to look at the documentation, which stated that the implementation of `Set` is much faster (C lib).  And since we are never going to have (or want) two words, which are the same, I opted to use set.  The time dropped to **`0.141` seconds on initialization and only `0.07` seconds** after subsequent usage of the initialized dictionary! Yessir! :heart_eyes:
 
-  I can't see how I can improve on the speed, since I have been trying to shave seconds here and there for the last couple of hours.  Might revisit this time.
+  I can't see how I can improve on the speed, since I have been trying to shave seconds here and there for the last couple of hours.  Might revisit this another time.
 
 ## Tests
   I should have test, but I genuinely did not have time to do them since I was a little busy between work and other interviews.  More than happy to discuss how to test this or even bring my laptop to test this in the interview if you want. 
