@@ -14,7 +14,7 @@ How to run:
 The readable(!) code makes use of:
 
 ####initializer:
-  to set up the class (although this is hard coded for the sake on simplicity)
+  to set up the class (although this is hard coded for the sake of simplicity)
 
 ####private methods:
   ensuring no one uses the class in an unexpected way/ I didn't want to the public API of the class to include the 'internals' of the class
