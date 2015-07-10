@@ -40,7 +40,7 @@ The readable(!) code makes use of:
 
   2) Uses a hash to look up the words.  Hash is much faster than an array at doing the search. `Searching through the array will take O(n) time`!
 
-  I managed to save around 10 seconds by looks through a hash, which looks like this:
+  I managed to save around 10 seconds by looking through a hash, which looks like this:
 
     hash[1] => [...all 1 letter words go here...]
     hash[2] => [...all 2 letter words go here...]
