@@ -53,7 +53,7 @@ The readable(!) code makes use of:
 
   Additionally, upon initialization of the dictionary, I also store the related valid words together in another hash.  For example:
 
-    hash["winto"] => [["win", "ton"], ["wint", "on"]]
+    hash["winton"] => [["win", "ton"], ["wint", "on"]]
 
   Again, rather than checking against all the words in the dictionary, I now only need to check against 2 words in this case (another O(n) problem solved)
 
