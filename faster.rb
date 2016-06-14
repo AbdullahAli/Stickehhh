@@ -87,16 +87,3 @@ class Faster
     word_length_hash
   end
 end
-
-
-#faster
-#array once only
-#2on memory, speed
-#assume no two words match
-#binarytree
-#whores :-)
-
-
-#used ruby prof
-
-# removed array, using set
