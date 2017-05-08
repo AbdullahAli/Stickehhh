@@ -13,13 +13,13 @@ How to run:
 ## Readable
 The readable(!) code makes use of:
 
-####initializer:
+#### initializer:
   to set up the class (although this is hard coded for the sake of simplicity)
 
-####private methods:
+#### private methods:
   ensuring no one uses the class in an unexpected way/ I didn't want the public API of the class to include the 'internals' of the class
 
-####the `match` method:
+#### the `match` method:
   this method does all the work of matching words. In essence, it tries to fragment the words into little sections, for example:
 
     `winton` will be split into:
